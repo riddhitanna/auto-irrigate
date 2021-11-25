@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>IoT</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+	 <link href=' http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+	 <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+  	<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+	 <link rel="stylesheet" type="text/css" href="main.css">
+
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+	<header>
+		<h1><center>Automatic Irrigation System</center></h1>
+	</header>
+
+	<div class="row">
+	 	<center>
+	    <div class="card dough" style="background-color: white; border-width:3px; width: 700px;, margin: 100px;">
+	        <div class="card-header"><b><center></center></b></div>
+	        <center><canvas id="line-chart" style="display: block;
+	    		height: 401px;
+	    		width:600px;">
+	    	</canvas></center>
+	    </div> 
+	</center>
+	</div>
+	&nbsp;
+	&nbsp;
+	
+	<div class="row" style="padding: 10px;">
+		<center>
+		<button class="mdc-button mdc-button--raised" style="background-color: #48848c;">
+	  		<span class="mdc-button__label"><i class="fa fa-plus"></i></span>
+		</button>
+		<button class="mdc-button mdc-button--raised" style="background-color:#8c4848;">
+	  		<span class="mdc-button__label"><i class="fa fa-minus" aria-hidden="true"></i></span>
+		</button>
+	</center>
+	</div>
+
+
+	<div class="row">
+		<center>
+		<button class="mdc-button mdc-button--raised custom-text-button custom-outlined-button" style="background-color: #4d4d4d;">
+	  		<span class="mdc-button__label" style="color: white;">AUTO</span>
+		</button>
+		</center>
+	</div>
+
+</body>
+
+
+<script type="text/javascript">
+	
+	new Chart(document.getElementById("line-chart"), {
+  type: 'line',
+  data: {
+    labels: [1500,1600,1700,1750,1800,1850,1900,1950,1999,2050],
+    datasets: [{ 
+        data: [86,114,106,106,107,111,133,221,783,2478],
+        label: "Humidity",
+        borderColor: "#3e95cd",
+        fill: false
+      }
+    ]
+  },
+  options: {
+
+  	scales: {
+
+        xAxes: [{
+            gridLines: {
+                color: "rgba(0, 0, 0, 0)",
+            }, 
+            scaleLabel: {
+                    display: true,
+                    labelString: 'Temperature'
+                }
+        }
+        ],
+        yAxes: [{
+            gridLines: {
+                color: "rgba(0, 0, 0, 0)",
+            }  , 
+            scaleLabel: {
+                    display: true,
+                    labelString: 'Humidity'
+                } 
+        }]
+    }, 
+    title: {
+      display: true,
+      text: 'Humidity vs. Temperature'
+    }
+  }
+});
+</script>
+</html>
