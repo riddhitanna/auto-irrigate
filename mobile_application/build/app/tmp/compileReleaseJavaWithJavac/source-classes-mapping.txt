@@ -1,0 +1,4 @@
+io/flutter/plugins/GeneratedPluginRegistrant.java
+ io.flutter.plugins.GeneratedPluginRegistrant
+com/example/sarthak/iot_auto_irrigation/BuildConfig.java
+ com.example.sarthak.iot_auto_irrigation.BuildConfig

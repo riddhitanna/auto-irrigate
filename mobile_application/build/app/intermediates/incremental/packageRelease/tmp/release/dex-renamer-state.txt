@@ -1,0 +1,4 @@
+#Thu Dec 02 15:17:34 EST 2021
+base.0=/Users/sarthakpatel/StudioProjects/iot_auto_irrigation/build/app/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
